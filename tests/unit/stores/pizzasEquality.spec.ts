@@ -7,7 +7,21 @@ describe('cartStore', ()=> {
         setActivePinia(createPinia())
     })
 
+    it.todo('getPizzaByHash', () => {
+
+    })
+
     it.todo('addToCart', () => {
+
+    })
+
+    it.todo('purgeFromCart', () => {
+
+    })
+    it.todo('increaseAmountInCart', () => {
+
+    })
+    it.todo('decreaseAmountInCart', () => {
 
     })
 

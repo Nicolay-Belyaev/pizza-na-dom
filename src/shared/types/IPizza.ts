@@ -1,3 +1,6 @@
+/*
+ * Описывает абстрактную пиццу.
+ */
 interface IPizza {
     id: string,
     name: string,

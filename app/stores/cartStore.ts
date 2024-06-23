@@ -1,4 +1,10 @@
-// во многом работа этого стора полагается на то, что не существует одинаковых пицц с разными ID
+/**
+ * Стор для корзины.
+ * Основа работы стора корзины - наличие у каждой находящейся в корзине пиццы хеша.
+ * Поэтому, каждая пицца, которая попадает в стор, должна реализовывать интерфейс IPizzaToCart.
+ * Ответственность за расчет хеша лежит на самом сторе (см. подробнее utils/simpleHash.ts).
+ * Ответственность за реализацию пиццами интерфеса IPizzaToCart лежит на компонентах, добавляющих пиццы в стор.
+ */
 import {simpleHash} from "~/src/utils/pizzaHash";
 
 export const useCartStore = defineStore('appStore', () => {
@@ -8,10 +14,17 @@ export const useCartStore = defineStore('appStore', () => {
         return inCartPizzas.find((pizza) => pizza.pizzaHash === hash);
     }
 
-    // Тут надо хорошо подумать о крайних и угловых случаях и обработке ошибок.
+    // TODO: Тут надо хорошо подумать о крайних и угловых случаях и обработке ошибок.
+    // TODO: Написать тесты.
+
+    /*
+     * addToCart умеет проверять наличие пиццы с выбранными изменяемыми параметрами в сторе и:
+     * либо увеличивать количество в уже лежащей в сторе пицце (amountInCart),
+     * либо добавлять в стор новую пиццу.
+     */
     const addToCart = (incomingPizza: IPizzaToCart) => {
         incomingPizza.pizzaHash = simpleHash(incomingPizza); // store заботится о расчете хеша.
-        const samePizzaInCart = getPizzaByHash(incomingPizza.pizzaHash)
+        const samePizzaInCart = getPizzaByHash(incomingPizza.pizzaHash) // ищем в сторе совпадение
         samePizzaInCart ? samePizzaInCart.amountInCart++ : inCartPizzas.push(incomingPizza);
     };
 
@@ -39,5 +52,5 @@ export const useCartStore = defineStore('appStore', () => {
         }
     }
 
-    return { inCartPizzas, addToCart,  purgeFromCart}
+    return { inCartPizzas, addToCart,  purgeFromCart, increaseAmountInCart, decreaseAmountInCart }
 })
