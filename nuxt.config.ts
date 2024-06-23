@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: [
         '@pinia/nuxt',
+        '@nuxt/test-utils/module'
     ],
     imports: {
         dirs: ['./app/stores/**'],

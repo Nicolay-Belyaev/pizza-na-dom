@@ -1,7 +1,7 @@
 <template>
   <div>
     Это главная страница
-  <UiCardsRenderer :pizza-cards="pizzaCards"/>
+  <CardsRenderer :pizza-cards="pizzaCards"/>
   </div>
 </template>
 
