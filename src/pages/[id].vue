@@ -5,6 +5,7 @@ import {usePizzaStore} from "~/app/stores/pizzaStore";
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
+const selectedTopping = ref([])
 </script>
 
 <template>
@@ -19,14 +20,20 @@ const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
       </div>
 
       <div>
-        <UiCheckboxWrapper :toppings="pizza.toppings"/>
+        <p>Selected Topping: {{ selectedTopping }}</p>
+        <UiCheckboxGroup
+            v-model:value="selectedTopping"
+            name="toppings"
+            :options="pizza.toppings">
+        </UiCheckboxGroup>
       </div>
 
       <select>
 
       </select>
       <UiBaseButton form="sizepicker-form"
-                    color="sizepicker-color">добавить в корзину
+                    color="sizepicker-color">
+        добавить в корзину
       </UiBaseButton>
     </div>
   </div>
@@ -46,5 +53,8 @@ const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
 
 img {
   width: 440px;
+}
+.group-checkbox {
+  @include flexd();
 }
 </style>
