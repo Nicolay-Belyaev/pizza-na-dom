@@ -1,32 +1,43 @@
-import {pizzasToCartEquality} from "~/src/utils/pizzasToCartEquality";
+// во многом работа этого стора полагается на то, что не существует одинаковых пицц с разными ID
+import {simpleHash} from "~/src/utils/pizzaHash";
 
 export const useCartStore = defineStore('appStore', () => {
     const inCartPizzas: Array<IPizzaToCart> = [];
 
-    const toppingsEquality = (firstPizzaToppings: string[], secondPizzaToppings: string[]) => {
-        if (firstPizzaToppings.length !== secondPizzaToppings.length) {
-            return false;
-        }
-        return firstPizzaToppings.every((topping) => {
-            return secondPizzaToppings.includes(topping)
-        })
+    const getPizzaByHash = (hash: number) => {
+        return inCartPizzas.find((pizza) => pizza.pizzaHash === hash);
     }
 
-    const pizzasToCartEquality = (pizza1: IPizzaToCart, pizza2: IPizzaToCart) => {
-        return !(
-            pizza1.id !== pizza2.id ||
-            pizza1.selectedSize !== pizza2.selectedSize ||
-            pizza1.finalPrice !== pizza2.finalPrice ||
-            !toppingsEquality(pizza1.selectedToppings, pizza2.selectedToppings)
-        );
-    }
+    // Тут надо хорошо подумать о крайних и угловых случаях и обработке ошибок.
     const addToCart = (incomingPizza: IPizzaToCart) => {
-        const samePizzaInCart = inCartPizzas.find((pizzaInCart) => {
-            pizzasToCartEquality(incomingPizza, pizzaInCart)
-            })
-        samePizzaInCart ? samePizzaInCart.amountInCart++ : inCartPizzas.push(incomingPizza)
-    }
-    const removeFromCart = ()
+        incomingPizza.pizzaHash = simpleHash(incomingPizza); // store заботится о расчете хеша.
+        const samePizzaInCart = getPizzaByHash(incomingPizza.pizzaHash)
+        samePizzaInCart ? samePizzaInCart.amountInCart++ : inCartPizzas.push(incomingPizza);
+    };
 
-    return { inCartPizzas, toppingsEquality, pizzasToCartEquality, addToCart }
+    const purgeFromCart = (incomingPizzaHash: number) => {
+        const pizzaIndexInCart = inCartPizzas.findIndex((pizza) =>
+            pizza.pizzaHash === incomingPizzaHash
+        );
+        inCartPizzas.splice(pizzaIndexInCart, 1)
+    }
+
+    const increaseAmountInCart = (incomingPizzaHash: number) => {
+        const pizzaInCart = getPizzaByHash(incomingPizzaHash);
+        pizzaInCart ? pizzaInCart.amountInCart++ : console.log("Не смог найти такую пиццу в корзине!");
+    }
+
+    const decreaseAmountInCart = (incomingPizzaHash: number) => {
+        const pizzaInCart = getPizzaByHash(incomingPizzaHash);
+        if (!pizzaInCart) {
+            console.log("Не смог найти такую пиццу в корзине!");
+            return;
+        }
+        pizzaInCart.amountInCart--;
+        if (pizzaInCart.amountInCart === 0) {
+            purgeFromCart(incomingPizzaHash)
+        }
+    }
+
+    return { inCartPizzas, addToCart,  purgeFromCart}
 })
