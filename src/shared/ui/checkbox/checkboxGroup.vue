@@ -10,7 +10,7 @@ const props = defineProps({
     required: true,
   },
   options: {
-    type:Array<IPizza>,
+    type:Array,
     required: true,
   },
 })
@@ -30,11 +30,11 @@ const check = (params: Object) => {
 <template>
   <div v-for="option in options" :key="option.id">
     <UiCheckbox
-        :label="option.name"
-        :id="option.id"
+        :label="option"
+        :id="option"
         :name="name"
-        :value="option.name"
-        :checked="value.includes(option.id)"
+        :value="option"
+        :checked="value.includes(option)"
         group
         @updateCheckboxGroup="check"/>
   </div>

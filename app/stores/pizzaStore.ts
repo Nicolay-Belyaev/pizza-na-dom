@@ -6,42 +6,42 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             description: "Томатный соус, моцарелла, творожный сыр, пюре манго, руккола.",
             image: "https://static.tildacdn.com/stor3137-3066-4533-b638-666639636363/11848312.jpg",
             params: {
-                large: {
-                    price: 895,
-                    sizeInSm: 35,
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
                     toppings: [
                         {
-                            name: "моцарелла", price: 30
+                            name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 10
                         }
                     ]
                 },
@@ -84,45 +84,45 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                         }
                     ]
                 },
-                small: {
-                    price: 485,
-                    sizeInSm: 25,
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
                     toppings: [
                         {
-                            name: "моцарелла", price: 10
+                            name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 10
+                            title: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 10
+                            title: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 10
+                            title: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 10
+                            title: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 10
+                            title: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 10
+                            title: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            title: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 10
+                            title: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 10
+                            title: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 10
+                            title: "ананасы", price: 30
                         }
                     ]
-                }
+                },
             },
         },
         {
