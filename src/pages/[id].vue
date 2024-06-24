@@ -6,7 +6,22 @@ const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
 const selectedTopping = ref([])
 const selectedSize = ref(25)
+const finalPrice = ref(pizza?.params.small.price)
 
+const topings = computed((selectedSize) => {
+  let resultArr = [];
+  pizza?.params.small.toppings.forEach((item: object) => {
+    resultArr.push({nameitem.name})
+  })
+  return resultArr;
+})
+const sizes = computed(() => {
+  let resultArr = [];
+  Object.keys(pizza?.params).forEach((item: string) => {
+    resultArr.push(pizza?.params[item].sizeInSm)
+  })
+  return resultArr;
+})
 </script>
 
 <template>
@@ -15,20 +30,21 @@ const selectedSize = ref(25)
     <img :src="`${pizza.image}`">
     <div class="pizza__constructor">
       <h2>{{ pizza.name }}</h2>
-      <p>{{ pizza.prices[0] }}р</p>
+      <p>{{ finalPrice }}р</p>
       <div>
         <p>выбирите размер пиццы</p>
         <UiWidgetsRadioButtons
             v-model="selectedSize"
-            :checkboxes="pizza.sizes"/>
+            :checkboxes="sizes"/>
       </div>
 
       <div>
         <UiCheckboxGroup
             v-model:value="selectedTopping"
             name="toppings"
-            :options="pizza.toppings">
+            :options="topings">
         </UiCheckboxGroup>
+        <span></span>
       </div>
 
       <select>
@@ -57,6 +73,7 @@ const selectedSize = ref(25)
 img {
   width: 440px;
 }
+
 .group-checkbox {
   @include flexd();
 }
