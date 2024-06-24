@@ -1,6 +1,7 @@
 <script setup lang="ts">
-
   const cartStore = useCartStore();
+
+
   const inStore = cartStore.inCartPizzas
 </script>
 
