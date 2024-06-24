@@ -7,8 +7,8 @@
  */
 import {simpleHash} from "~/src/utils/pizzaHash";
 
-export const useCartStore = defineStore('appStore', () => {
-    const inCartPizzas: Array<IPizzaToCart> = [];
+export const useCartStore = defineStore('cartStore', () => {
+    const inCartPizzas: Array<IPizzaToCart> = reactive([]);
 
     const getPizzaByHash = (hash: number) => {
         return inCartPizzas.find((pizza) => pizza.pizzaHash === hash);
@@ -18,9 +18,10 @@ export const useCartStore = defineStore('appStore', () => {
     // TODO: Написать тесты.
 
     /*
-     * addToCart умеет проверять наличие пиццы с выбранными изменяемыми параметрами в сторе и:
-     * либо увеличивать количество в уже лежащей в сторе пицце (amountInCart),
-     * либо добавлять в стор новую пиццу.
+     * addToCart вычисляет хеш для "новой" пиццы,
+     * проверяет, есть ли уже в сторе пицца таким же хешем и:
+     * либо увеличивает количество в уже лежащей в сторе пицце (amountInCart),
+     * либо добавляет в стор новую пиццу.
      */
     const addToCart = (incomingPizza: IPizzaToCart) => {
         incomingPizza.pizzaHash = simpleHash(incomingPizza); // store заботится о расчете хеша.
@@ -32,6 +33,10 @@ export const useCartStore = defineStore('appStore', () => {
         const pizzaIndexInCart = inCartPizzas.findIndex((pizza) =>
             pizza.pizzaHash === incomingPizzaHash
         );
+        if (pizzaIndexInCart === -1) {
+            console.log("Не смог найти такую пиццу в корзине!");
+            return;
+        }
         inCartPizzas.splice(pizzaIndexInCart, 1)
     }
 

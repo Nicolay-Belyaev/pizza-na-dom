@@ -1,12 +1,31 @@
 <script setup lang="ts">
   import type {PropType} from "vue";
 
-  defineProps({
+  const props = defineProps({
     pizza: {
       type: Object as PropType<IPizza>,
-      default: {} // накидать заглушку на случай отсутствия данных
+      default: {} // TODO: сделать заглушку
     }
   })
+
+  const cartStore = useCartStore()
+  const toCart = () => {
+    const pizzaToCart: IPizzaToCart = {
+      selectedToppings: [props.pizza.toppings[0]],
+      finalPrice: props.pizza.prices[0],
+      amountInCart: 1,
+      pizzaHash: 0,
+      id: props.pizza.id,
+      selectedSize: props.pizza.sizes[0].value,
+      name: props.pizza.name,
+      description: props.pizza.description,
+      image: props.pizza.image,
+      sizes: props.pizza.sizes,
+      prices: props.pizza.prices,
+      toppings: props.pizza.toppings
+    }
+    cartStore.addToCart(pizzaToCart)
+  }
 
 </script>
 
@@ -29,6 +48,7 @@
         Выбрать размер
       </UiBaseButton>
     </NuxtLink>
+    <UiBaseButton @click="toCart()">В корзину</UiBaseButton>
   </div>
 </template>
 
