@@ -9,6 +9,7 @@ const selectedTopping = ref([])
 </script>
 
 <template>
+
   <div class="pizza">
     <img :src="`${pizza.image}`">
     <div class="pizza__constructor">
