@@ -5,169 +5,750 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             name: "Манго",
             description: "Томатный соус, моцарелла, творожный сыр, пюре манго, руккола.",
             image: "https://static.tildacdn.com/stor3137-3066-4533-b638-666639636363/11848312.jpg",
-            sizes: [
-                {
-                    title: "Small", value: 25
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    title: "Medium", value: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    title: "Large", value: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ],
-            prices: [495, 500, 700],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
-                },
-                {
-                    name: "Mushrooms", id: 30
-                },
-                {
-                    name: "Onions", id: 35
-                }
-            ]
+            },
         },
         {
             id: "2",
             name: "Терияки пицца",
-            description: "Classic American pizza with tomato sauce, mozzarella cheese, and pepperoni",
+            description: "Сливочный соус, моцарелла, нежное куриное филе, свежие шампиньоны, прованские травы, кунжут и соус Терияки",
             image: "https://static.tildacdn.com/stor3137-3066-4533-b638-666639636363/11848312.jpg",
-            sizes: [
-                {
-                    title: "Small", value: 25
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    title: "Medium", value: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    title: "Large", value: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ],
-            prices: [485, 715, 895],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
-                },
-                {
-                    name: "Mushrooms", id: 30
-                },
-                {
-                    name: "Onions", id: 35
-                }
-            ]
+            },
         },
         {
             id: "3",
             name: "Сальса",
-            description: "Pizza loaded with fresh veggies like bell peppers, mushrooms, onions, and olives",
+            description: "Острый соус сальса, моцарелла, чеддер, нежное куриное филе, прованские травы и кукурузные чипсы начос",
             image: "https://optim.tildacdn.com/stor3365-3731-4962-b936-383262666637/-/format/webp/74219337.jpg",
-            sizes: [
-                {
-                    title: "Small", value: 25
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    title: "Medium", value: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    title: "Large", value: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ],
-            prices: [485, 715, 895],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
-                },
-                {
-                    name: "Mushrooms", id: 30
-                },
-                {
-                    name: "Onions", id: 35
-                }
-            ]
-        },
+            },        },
         {
             id: "4",
             name: "XXXX-самая острая пицца в городе",
-            description: "Pizza loaded with fresh veggies like bell peppers, mushrooms, onions, and olives",
+            description: "Сливочный соус, моцарелла, соус на основе острых перцев Каролина Рипер, Тринидадский Скорпион и Призрак, начос, курица и груша",
             image: "https://optim.tildacdn.com/stor3137-3066-4533-b638-666639636363/-/resize/312x/-/format/webp/11848312.jpg",
-            sizes: [
-                {
-                    title: "Small", value: 25,
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    title: "Medium", value: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    title: "Large", value: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ],
-            prices: [485, 715, 895],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
-                },
-                {
-                    name: "Mushrooms", id: 30
-                },
-                {
-                    name: "Onions", id: 35
-                }
-            ]
+            },
         },
         {
             id: "5",
             name: "Макс Пейн",
-            description: "Pizza loaded with fresh veggies like bell peppers, mushrooms, onions, and olives",
+            description: "Томатный соус, моцарелла, репчатый лук, пепперони, красный халапеньо и бургер соус.",
             image: "https://optim.tildacdn.com/tild3166-6665-4265-b338-336133376130/-/format/webp/photo.jpg",
-            sizes: [
-                {title: "Small", value: 25},
-                {title: "Medium", value: 30},
-                {title: "Large", value: 35}
-            ],
-            prices: [485, 715, 895],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    name: "Mushrooms", id: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    name: "Onions", id: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ]
+            },
         },
         {
             id: "6",
             name: "Пепперони",
-            description: "Pizza loaded with fresh veggies like bell peppers, mushrooms, onions, and olives",
+            description: "Томатный соус, моцарелла, пепперони.",
             image: "https://optim.tildacdn.com/tild3561-6630-4162-b362-613865343931/-/format/webp/_.jpg",
-            sizes: [
-                {
-                    title: "Small", value: 25
+            params: {
+                large: {
+                    price: 895,
+                    sizeInSm: 35,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 30
+                        },
+                        {
+                            title: "пепперони", price: 30
+                        },
+                        {
+                            title: "черри", price: 30
+                        },
+                        {
+                            title: "бекон", price: 30
+                        },
+                        {
+                            title: "ветчина", price: 30
+                        },
+                        {
+                            title: "шампиньены", price: 30
+                        },
+                        {
+                            title: "халопеньо", price: 30
+                        },
+                        {
+                            title: "соленые огурчики", price: 30
+                        },
+                        {
+                            title: "дор блю", price: 30
+                        },
+                        {
+                            title: "креветки", price: 30
+                        },
+                        {
+                            title: "ананасы", price: 30
+                        }
+                    ]
                 },
-                {
-                    title: "Medium", value: 30
+                medium: {
+                    price: 715,
+                    sizeInSm: 30,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 20
+                        },
+                        {
+                            title: "пепперони", price: 20
+                        },
+                        {
+                            title: "черри", price: 20
+                        },
+                        {
+                            title: "бекон", price: 20
+                        },
+                        {
+                            title: "ветчина", price: 20
+                        },
+                        {
+                            title: "шампиньены", price: 20
+                        },
+                        {
+                            title: "халопеньо", price: 20
+                        },
+                        {
+                            title: "соленые огурчики", price: 20
+                        },
+                        {
+                            title: "дор блю", price: 20
+                        },
+                        {
+                            title: "креветки", price: 20
+                        },
+                        {
+                            title: "ананасы", price: 20
+                        }
+                    ]
                 },
-                {
-                    title: "Large", value: 35
+                small: {
+                    price: 485,
+                    sizeInSm: 25,
+                    toppings: [
+                        {
+                            name: "моцарелла", price: 10
+                        },
+                        {
+                            title: "пепперони", price: 10
+                        },
+                        {
+                            title: "черри", price: 10
+                        },
+                        {
+                            title: "бекон", price: 10
+                        },
+                        {
+                            title: "ветчина", price: 10
+                        },
+                        {
+                            title: "шампиньены", price: 10
+                        },
+                        {
+                            title: "халопеньо", price: 10
+                        },
+                        {
+                            title: "соленые огурчики", price: 10
+                        },
+                        {
+                            title: "дор блю", price: 10
+                        },
+                        {
+                            title: "креветки", price: 10
+                        },
+                        {
+                            title: "ананасы", price: 10
+                        }
+                    ]
                 }
-            ],
-            prices: [485, 715, 895],
-            toppings: [
-                {
-                    name: "Bell Peppers", id: 25
-                },
-                {
-                    name: "Mushrooms", id: 30
-                },
-                {
-                    name: "Onions", id: 35
-                }
-            ]
-        }
+            },
+        },
     ]
 
     const getPizzaById = (id: String) => {

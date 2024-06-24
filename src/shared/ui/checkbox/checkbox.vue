@@ -21,10 +21,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  disabled: {
-    type: Boolean,
-    default: false
-  },
   group: {
     type: Boolean,
     default: false
@@ -32,7 +28,7 @@ const props = defineProps({
 })
 const handleClick = ({target}: Object) => {
   if (props.group === true) {
-    emits('updateCheckboxGroup', {optionId: props.id, checked: target.checked})
+    emits('updateCheckboxGroup', {optionValue: props.value, checked: target.checked})
   } else {
     emits('update:checked', target.checked)
   }
