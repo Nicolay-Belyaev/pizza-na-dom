@@ -7,12 +7,27 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             image: "https://static.tildacdn.com/stor3137-3066-4533-b638-666639636363/11848312.jpg",
             sizes: [
                 {
-                    title: "Small",
-                    value: 25,
+                    title: "Small", value: 25
+                },
+                {
+                    title: "Medium", value: 30
+                },
+                {
+                    title: "Large", value: 35
                 }
             ],
-            prices: [485],
-            toppings: ["Basil"]
+            prices: [495, 500, 700],
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         },
         {
             id: "2",
@@ -21,14 +36,27 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             image: "https://static.tildacdn.com/stor3137-3066-4533-b638-666639636363/11848312.jpg",
             sizes: [
                 {
-                    title: "Small", value: 25},
+                    title: "Small", value: 25
+                },
                 {
-                    title: "Medium", value: 30},
+                    title: "Medium", value: 30
+                },
                 {
-                    title: "Large", value: 35}
+                    title: "Large", value: 35
+                }
             ],
             prices: [485, 715, 895],
-            toppings: ["Pepperoni"]
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         },
         {
             id: "3",
@@ -37,14 +65,27 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             image: "https://optim.tildacdn.com/stor3365-3731-4962-b936-383262666637/-/format/webp/74219337.jpg",
             sizes: [
                 {
-                    title: "Small", value: 25},
+                    title: "Small", value: 25
+                },
                 {
-                    title: "Medium", value: 30},
+                    title: "Medium", value: 30
+                },
                 {
-                    title: "Large", value: 35}
+                    title: "Large", value: 35
+                }
             ],
             prices: [485, 715, 895],
-            toppings: ["Bell Peppers", "Mushrooms", "Onions", "Olives"]
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         },
         {
             id: "4",
@@ -53,14 +94,27 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             image: "https://optim.tildacdn.com/stor3137-3066-4533-b638-666639636363/-/resize/312x/-/format/webp/11848312.jpg",
             sizes: [
                 {
-                    title: "Small", value: 25,},
+                    title: "Small", value: 25,
+                },
                 {
-                    title: "Medium", value: 30},
+                    title: "Medium", value: 30
+                },
                 {
-                    title: "Large", value: 35}
+                    title: "Large", value: 35
+                }
             ],
             prices: [485, 715, 895],
-            toppings: ["Bell Peppers", "Mushrooms", "Onions", "Olives"]
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         },
         {
             id: "5",
@@ -68,15 +122,22 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             description: "Pizza loaded with fresh veggies like bell peppers, mushrooms, onions, and olives",
             image: "https://optim.tildacdn.com/tild3166-6665-4265-b338-336133376130/-/format/webp/photo.jpg",
             sizes: [
-                {
-                    title: "Small", value: 25},
-                {
-                    title: "Medium", value: 30},
-                {
-                    title: "Large", value: 35}
+                {title: "Small", value: 25},
+                {title: "Medium", value: 30},
+                {title: "Large", value: 35}
             ],
             prices: [485, 715, 895],
-            toppings: ["Bell Peppers", "Mushrooms", "Onions", "Olives"]
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         },
         {
             id: "6",
@@ -85,16 +146,32 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             image: "https://optim.tildacdn.com/tild3561-6630-4162-b362-613865343931/-/format/webp/_.jpg",
             sizes: [
                 {
-                    title: "Small", value: 25},
+                    title: "Small", value: 25
+                },
                 {
-                    title: "Medium", value: 30},
+                    title: "Medium", value: 30
+                },
                 {
-                    title: "Large", value: 35}
+                    title: "Large", value: 35
+                }
             ],
             prices: [485, 715, 895],
-            toppings: ["Bell Peppers", "Mushrooms", "Onions", "Olives"]
+            toppings: [
+                {
+                    name: "Bell Peppers", id: 25
+                },
+                {
+                    name: "Mushrooms", id: 30
+                },
+                {
+                    name: "Onions", id: 35
+                }
+            ]
         }
-]
+    ]
 
-    return { pizzaCards }
+    const getPizzaById = (id: String) => {
+        return pizzaCards.find((item) => item.id === id)
+    }
+    return {pizzaCards, getPizzaById}
 })

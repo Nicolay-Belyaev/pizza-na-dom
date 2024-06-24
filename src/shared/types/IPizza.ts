@@ -5,5 +5,5 @@ interface IPizza {
     image: string,
     sizes: ICheckbox[],
     prices: number[];
-    toppings: string[]
+    toppings: ICheckboxForTopping[]
 }
