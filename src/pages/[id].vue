@@ -2,10 +2,11 @@
 import {useRoute} from 'vue-router';
 import {usePizzaStore} from "~/app/stores/pizzaStore";
 
-const nuxtApp = useNuxtApp();
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
 const selectedTopping = ref([])
+const selectedSize = ref(25)
+
 </script>
 
 <template>
@@ -16,12 +17,13 @@ const selectedTopping = ref([])
       <h2>{{ pizza.name }}</h2>
       <p>{{ pizza.prices[0] }}р</p>
       <div>
-        <div>выбирите размер</div>
-        <UiWidgetsRadioButtons :checkboxes="pizza.sizes"/>
+        <p>выбирите размер пиццы</p>
+        <UiWidgetsRadioButtons
+            v-model="selectedSize"
+            :checkboxes="pizza.sizes"/>
       </div>
 
       <div>
-        <p>Selected Topping: {{ selectedTopping }}</p>
         <UiCheckboxGroup
             v-model:value="selectedTopping"
             name="toppings"

@@ -1,5 +1,4 @@
-interface ICheckboxForTopping{
-    name: string,
-    id: number | string,
+interface ICheckboxForTopping extends ICheckbox{
+    price: Array<number>
 }
 

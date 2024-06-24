@@ -10,25 +10,20 @@ const props = defineProps({
     required: true,
   },
   options: {
-    type: Array,
+    type:Array<IPizza>,
     required: true,
-    validator: (value: Array) => {
-      const hasNameKey = value.every((option: object) => Object.keys(option).includes('name'));
-      const hasIdKey = value.every((option: object) => Object.keys(option).includes('id'));
-      return hasNameKey && hasIdKey;
-    },
-    default: ''
   },
 })
 
 const check = (params: Object) => {
   let updateValue = [...props.value]
   if (params.checked) {
-      updateValue.push(params.optionId)
+      updateValue.push(params.optionValue)
   } else {
-    updateValue.splice(updateValue.indexOf(params.optionId), 1)
+    updateValue.splice(updateValue.indexOf(params.optionValue), 1)
   }
   emit('update:value', updateValue)
+  console.log(params)
 }
 </script>
 

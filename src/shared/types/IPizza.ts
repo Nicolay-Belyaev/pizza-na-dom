@@ -3,7 +3,5 @@ interface IPizza {
     name: string,
     description: string
     image: string,
-    sizes: ICheckbox[],
-    prices: number[];
-    toppings: ICheckboxForTopping[]
+    params: object
 }
