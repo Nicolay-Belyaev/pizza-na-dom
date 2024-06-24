@@ -10,6 +10,7 @@ const selectedSize = ref(25)
 </script>
 
 <template>
+
   <div class="pizza">
     <img :src="`${pizza.image}`">
     <div class="pizza__constructor">
