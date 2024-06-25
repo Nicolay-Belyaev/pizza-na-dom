@@ -45,7 +45,7 @@ const handleClick = ({target}: Object) => {
       :checked="props.checked"
       @input="handleClick($event)">
   <label :for="props.id">
-    {{ label }}
+    {{ value }}
   </label>
 
 </template>

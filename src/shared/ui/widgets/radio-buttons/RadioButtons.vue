@@ -8,7 +8,7 @@ import Array = SymbolKind.Array;
 
 defineProps({
   checkboxes: {
-    type: [],
+    type: [Object],
     default: [],
     required: true
   },
@@ -25,10 +25,10 @@ defineModel();
   <div class="radio-container" :class="{inCollomn: inCollomn}">
     <UiBaseButton
         v-for="checkbox in checkboxes"
-        :key="checkbox"
-        :class="{ active: checkbox == modelValue}"
-        @click="$emit('update:modelValue', checkbox)">
-      {{ checkbox }}
+        :key="checkbox.name"
+        :class="{ active: checkbox.name == modelValue}"
+        @click="$emit('update:modelValue', checkbox.name)">
+      {{ checkbox.value }}
     </UiBaseButton>
   </div>
 </template>
