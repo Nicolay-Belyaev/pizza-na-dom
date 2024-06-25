@@ -6,13 +6,14 @@ const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
 const selectedTopping = ref([])
 const selectedSize = ref('small')
-const finalPrice = ref(pizza?.params.small.price)
+const finalPrice = pizza?.params.small.price
 
 const sizes = computed(() => {
   let resultArr = [];
   Object.keys(pizza?.params).forEach((item: string) => {
     resultArr.push({name: item, value: pizza?.params[item].sizeInSm})
   })
+  changeFinalPrice();
   return resultArr;
 })
 
@@ -21,8 +22,20 @@ const topings = computed(() => {
   pizza?.params[selectedSize.value].toppings.forEach((item: object) => {
     resultArr.push(item)
   })
+  changeFinalPrice();
   return resultArr;
 })
+
+const changeFinalPrice = () => {
+  const res = pizza?.params[selectedSize.value].toppings.reduce((acc, item) => {
+    if (selectedTopping.value.includes(item.name)) {
+      return acc + item.price;
+    } else {
+      return acc;
+    }
+  }, 0);
+  finalPrice.value = pizza?.params[selectedSize.value].price + res
+}
 </script>
 
 <template>
@@ -42,6 +55,7 @@ const topings = computed(() => {
       <div>
         <UiCheckboxGroup
             v-model:value="selectedTopping"
+            name="toppings"
             :options="topings">
         </UiCheckboxGroup>
       </div>

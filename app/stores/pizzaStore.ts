@@ -53,34 +53,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -89,37 +89,37 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                     sizeInSm: 35,
                     toppings: [
                         {
-                            name: "моцарелла", price: 30
+                            name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 10
                         }
                     ]
                 },
@@ -139,34 +139,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 30
                         }
                     ]
                 },
@@ -178,34 +178,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -217,34 +217,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 10
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 10
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 10
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 10
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 10
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 10
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 10
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 10
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 10
+                            name: "ананасы", price: 10
                         }
                     ]
                 }
@@ -264,34 +264,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 30
                         }
                     ]
                 },
@@ -303,34 +303,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -342,38 +342,38 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 10
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 10
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 10
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 10
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 10
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 10
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 10
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 10
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 10
+                            name: "ананасы", price: 10
                         }
                     ]
                 }
-            },        },
+            },    },
         {
             id: "4",
             name: "XXXX-самая острая пицца в городе",
@@ -388,34 +388,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 30
                         }
                     ]
                 },
@@ -427,34 +427,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -466,34 +466,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 10
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 10
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 10
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 10
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 10
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 10
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 10
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 10
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 10
+                            name: "ананасы", price: 10
                         }
                     ]
                 }
@@ -513,34 +513,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 30
                         }
                     ]
                 },
@@ -552,34 +552,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -591,38 +591,38 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 10
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 10
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 10
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 10
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 10
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 10
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 10
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 10
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 10
+                            name: "ананасы", price: 10
                         }
                     ]
                 }
-            },
+            }
         },
         {
             id: "6",
@@ -638,34 +638,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 30
                         },
                         {
-                            title: "пепперони", price: 30
+                            name: "пепперони", price: 30
                         },
                         {
-                            title: "черри", price: 30
+                            name: "черри", price: 30
                         },
                         {
-                            title: "бекон", price: 30
+                            name: "бекон", price: 30
                         },
                         {
-                            title: "ветчина", price: 30
+                            name: "ветчина", price: 30
                         },
                         {
-                            title: "шампиньены", price: 30
+                            name: "шампиньены", price: 30
                         },
                         {
-                            title: "халопеньо", price: 30
+                            name: "халопеньо", price: 30
                         },
                         {
-                            title: "соленые огурчики", price: 30
+                            name: "соленые огурчики", price: 30
                         },
                         {
-                            title: "дор блю", price: 30
+                            name: "дор блю", price: 30
                         },
                         {
-                            title: "креветки", price: 30
+                            name: "креветки", price: 30
                         },
                         {
-                            title: "ананасы", price: 30
+                            name: "ананасы", price: 30
                         }
                     ]
                 },
@@ -677,34 +677,34 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 20
                         },
                         {
-                            title: "пепперони", price: 20
+                            name: "пепперони", price: 20
                         },
                         {
-                            title: "черри", price: 20
+                            name: "черри", price: 20
                         },
                         {
-                            title: "бекон", price: 20
+                            name: "бекон", price: 20
                         },
                         {
-                            title: "ветчина", price: 20
+                            name: "ветчина", price: 20
                         },
                         {
-                            title: "шампиньены", price: 20
+                            name: "шампиньены", price: 20
                         },
                         {
-                            title: "халопеньо", price: 20
+                            name: "халопеньо", price: 20
                         },
                         {
-                            title: "соленые огурчики", price: 20
+                            name: "соленые огурчики", price: 20
                         },
                         {
-                            title: "дор блю", price: 20
+                            name: "дор блю", price: 20
                         },
                         {
-                            title: "креветки", price: 20
+                            name: "креветки", price: 20
                         },
                         {
-                            title: "ананасы", price: 20
+                            name: "ананасы", price: 20
                         }
                     ]
                 },
@@ -716,38 +716,38 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
                             name: "моцарелла", price: 10
                         },
                         {
-                            title: "пепперони", price: 10
+                            name: "пепперони", price: 10
                         },
                         {
-                            title: "черри", price: 10
+                            name: "черри", price: 10
                         },
                         {
-                            title: "бекон", price: 10
+                            name: "бекон", price: 10
                         },
                         {
-                            title: "ветчина", price: 10
+                            name: "ветчина", price: 10
                         },
                         {
-                            title: "шампиньены", price: 10
+                            name: "шампиньены", price: 10
                         },
                         {
-                            title: "халопеньо", price: 10
+                            name: "халопеньо", price: 10
                         },
                         {
-                            title: "соленые огурчики", price: 10
+                            name: "соленые огурчики", price: 10
                         },
                         {
-                            title: "дор блю", price: 10
+                            name: "дор блю", price: 10
                         },
                         {
-                            title: "креветки", price: 10
+                            name: "креветки", price: 10
                         },
                         {
-                            title: "ананасы", price: 10
+                            name: "ананасы", price: 10
                         }
                     ]
                 }
-            },
+            }
         },
     ]
 

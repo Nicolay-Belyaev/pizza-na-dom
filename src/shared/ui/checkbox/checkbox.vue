@@ -10,7 +10,7 @@ const props = defineProps({
     default: ''
   },
   value: {
-    type: String,
+    type: Object,
     default: ''
   },
   label: {
@@ -28,7 +28,7 @@ const props = defineProps({
 })
 const handleClick = ({target}: Object) => {
   if (props.group === true) {
-    emits('updateCheckboxGroup', {optionValue: props.value, checked: target.checked})
+    emits('updateCheckboxGroup', {optionValue: props.value.name, checked: target.checked})
   } else {
     emits('update:checked', target.checked)
   }
@@ -45,7 +45,7 @@ const handleClick = ({target}: Object) => {
       :checked="props.checked"
       @input="handleClick($event)">
   <label :for="props.id">
-    {{ value }}
+    {{ value.name }}{{ value.price }}
   </label>
 
 </template>

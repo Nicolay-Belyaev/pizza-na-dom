@@ -5,8 +5,12 @@ const props = defineProps({
     type: Array,
     default: ''
   },
+  name: {
+    type: String,
+    default: ''
+  },
   options: {
-    type:Array,
+    type: Array,
     required: true,
   },
 })
@@ -14,12 +18,11 @@ const props = defineProps({
 const check = (params: Object) => {
   let updateValue = [...props.value]
   if (params.checked) {
-      updateValue.push(params.optionValue)
+    updateValue.push(params.optionValue)
   } else {
     updateValue.splice(updateValue.indexOf(params.optionValue), 1)
   }
   emit('update:value', updateValue)
-  console.log(params)
 }
 </script>
 
@@ -28,7 +31,8 @@ const check = (params: Object) => {
     <UiCheckbox
         :label="option.name"
         :id="option.name"
-        :value="option.name"
+        :name="name"
+        :value="option"
         :checked="value.includes(option)"
         group
         @updateCheckboxGroup="check"/>
