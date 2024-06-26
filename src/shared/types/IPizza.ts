@@ -6,4 +6,5 @@ interface IPizza {
     sizes: string[],
     prices: string[],
     toppings: string[]
+    sauces: string[]
 }
