@@ -1,5 +1,5 @@
 export const usePizzaStore = defineStore('pizzaStore', () => {
-    const pizzaCards: globalThis.Ref<Array<IPizza>> = ref([
+    const pizzaCards = ref<IPizza[]>([
         {
             id: "1",
             name: "Манго",
