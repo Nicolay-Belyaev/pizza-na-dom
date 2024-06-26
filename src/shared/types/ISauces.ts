@@ -1,8 +1,8 @@
-interface ITopping {
+interface ISauces {
     name: string;
     price: string;
 }
 interface ISaucesObject {
-    [key: string]: ITopping;
+    [key: string]: ISauces;
 }
 
