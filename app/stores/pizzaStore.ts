@@ -1,5 +1,5 @@
 export const usePizzaStore = defineStore('pizzaStore', () => {
-    const pizzaCards: Array<IPizza> = [
+    const pizzaCards: Array<IPizza> = reactive([
         {
             id: "1",
             name: "Манго",
@@ -94,7 +94,12 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
             prices: [485, 715, 895],
             toppings: ["Bell Peppers", "Mushrooms", "Onions", "Olives"]
         }
-]
+])
 
-    return { pizzaCards }
+    const getPizzaByID = (pizzaID: string) => {
+        return pizzaCards.find((pizza) => {
+            return pizza.id === pizzaID
+        })
+    }
+    return { pizzaCards, getPizzaByID }
 })

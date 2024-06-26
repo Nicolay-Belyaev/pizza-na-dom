@@ -1,6 +1,7 @@
 <template>
   <div>
     Это главная страница
+
   <CardsRenderer :pizza-cards="pizzaCards"/>
   </div>
 </template>

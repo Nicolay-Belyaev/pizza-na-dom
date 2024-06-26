@@ -40,14 +40,14 @@
       <span v-if="pizza.prices.length > 1">от </span>
       <span>{{ pizza.prices[0] }} ₽</span>
     </div>
-    <NuxtLink
-        :to="{ name: 'id', params: {id: 'id-' + pizza.id + 'размер-20' + 'количество-2' + 'топинги-моцарело'} }">
+<!--    <NuxtLink-->
+<!--        :to="{ name: 'id', params: {id: 'id-' + pizza.id + 'размер-20' + 'количество-2' + 'топинги-моцарело'} }">-->
       <UiBaseButton
           form="sizepicker-form"
           color="sizepicker-color">
         Выбрать размер
       </UiBaseButton>
-    </NuxtLink>
+<!--    </NuxtLink>-->
     <UiBaseButton @click="toCart()">В корзину</UiBaseButton>
   </div>
 </template>
