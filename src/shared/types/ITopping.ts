@@ -1,8 +1,8 @@
 interface ITopping {
     name: string;
-    price: number[];
+    price: string[];
 }
 interface IToppings {
-    [key: number]: ITopping;
+    [key: string]: ITopping;
 }
 
