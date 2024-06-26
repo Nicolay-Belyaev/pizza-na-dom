@@ -5,4 +5,5 @@ interface IPizza {
     image: string,
     sizes: string[],
     prices: string[],
+    toppings: string[]
 }
