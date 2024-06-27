@@ -4,6 +4,9 @@ import {base64StoreToFullStore, storeStateToBase64} from "~/src/utils/storeState
 
 const cartStore = useCartStore();
 
+// возможный вариант: проверять в параметрах URL наличие state и показывать модальное окно с пиццами из параметров URL
+// спрашивать, добавлять ли пиццы-из-URL все вместе или (сделать кнопку) добавить конкретные.
+
 const logCart = () => {
   console.log(cartStore.inCartPizzas);
   const base64Store = storeStateToBase64()
