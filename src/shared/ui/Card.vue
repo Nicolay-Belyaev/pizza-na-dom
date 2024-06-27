@@ -1,31 +1,12 @@
 <script setup lang="ts">
   import type {PropType} from "vue";
 
-  const props = defineProps({
+  defineProps({
     pizza: {
       type: Object as PropType<IPizza>,
-      default: {} // TODO: сделать заглушку
+      default: {} // накидать заглушку на случай отсутствия данных
     }
   })
-
-  const cartStore = useCartStore()
-  const toCart = () => {
-    const pizzaToCart: IPizzaToCart = {
-      selectedToppings: [props.pizza.toppings[0]],
-      finalPrice: props.pizza.prices[0],
-      amountInCart: 1,
-      pizzaHash: 0,
-      id: props.pizza.id,
-      selectedSize: props.pizza.sizes[0].value,
-      name: props.pizza.name,
-      description: props.pizza.description,
-      image: props.pizza.image,
-      sizes: props.pizza.sizes,
-      prices: props.pizza.prices,
-      toppings: props.pizza.toppings
-    }
-    cartStore.addToCart(pizzaToCart)
-  }
 
 </script>
 
@@ -40,15 +21,14 @@
       <span v-if="pizza.prices.length > 1">от </span>
       <span>{{ pizza.prices[0] }} ₽</span>
     </div>
-<!--    <NuxtLink-->
-<!--        :to="{ name: 'id', params: {id: 'id-' + pizza.id + 'размер-20' + 'количество-2' + 'топинги-моцарело'} }">-->
+    <NuxtLink
+        :to="{ name: 'id', params: {id: 'id-' + pizza.id} }">
       <UiBaseButton
           form="sizepicker-form"
           color="sizepicker-color">
         Выбрать размер
       </UiBaseButton>
-<!--    </NuxtLink>-->
-    <UiBaseButton @click="toCart()">В корзину</UiBaseButton>
+    </NuxtLink>
   </div>
 </template>
 

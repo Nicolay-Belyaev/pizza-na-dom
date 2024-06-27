@@ -4,9 +4,10 @@
 interface IPizza {
     id: string,
     name: string,
-    description: string
+    description: string,
     image: string,
-    sizes: ICheckbox[],
-    prices: number[];
+    sizes: string[],
+    prices: string[],
     toppings: string[]
+    sauces: string[]
 }
