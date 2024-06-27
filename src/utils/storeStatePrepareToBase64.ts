@@ -15,7 +15,7 @@ export const base64StoreToFullStore = (base64: string) => {
     const pizzaStore = usePizzaStore();
     const cipheredStore = JSON.parse(atob(base64));
     const restoredStore: Array<IPizzaToCart> = cipheredStore.map((cipheredPizza: any) => {
-       const pizzaByID = pizzaStore.getPizzaByID(cipheredPizza[0]);
+       const pizzaByID = pizzaStore.getPizzaById(cipheredPizza[0]);
        if (pizzaByID) {
            return {
                id: cipheredPizza[0],

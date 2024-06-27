@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {usePizzaStore} from "~/app/stores/pizzaStore";
-
 const pizzaCards = usePizzaStore().pizzaCards;
 
 </script>

@@ -1,12 +1,32 @@
 <script setup lang="ts">
   import type {PropType} from "vue";
 
-  defineProps({
+  const props = defineProps({
     pizza: {
       type: Object as PropType<IPizza>,
       default: {} // накидать заглушку на случай отсутствия данных
     }
   })
+
+  const addPizzaToCart_TEMPORAL = () => {
+    useCartStore().addToCart({
+      id: props.pizza.id,
+      name: props.pizza.name,
+      description: props.pizza.description,
+      image: props.pizza.image,
+      sizes: props.pizza.sizes,
+      prices: props.pizza.prices,
+      toppings: props.pizza.toppings,
+      sauces: props.pizza.sauces,
+
+      selectedSauce: "1",
+      selectedSize: "25",
+      selectedToppings: ["1", "5"],
+      finalPrice: 750,
+      amountInCart: 1,
+      pizzaHash: 0
+    })
+  }
 
 </script>
 
@@ -29,6 +49,7 @@
         Выбрать размер
       </UiBaseButton>
     </NuxtLink>
+    <button @click="addPizzaToCart_TEMPORAL">Добавить в корзину</button>
   </div>
 </template>
 

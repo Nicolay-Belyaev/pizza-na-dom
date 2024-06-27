@@ -1,5 +1,5 @@
 export const usePizzaStore = defineStore('pizzaStore', () => {
-    const pizzaCards = ref<IPizza[]>([
+    const pizzaCards: Array<IPizza> = reactive([
         {
             id: "1",
             name: "Манго",
@@ -63,7 +63,7 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
     ]);
 
     const getPizzaById = (id: String) => {
-        return pizzaCards.value.find(({id: string}) => id === id);
+        return pizzaCards.find(({id: string}) => id === id);
     };
     return { pizzaCards, getPizzaById };
 });

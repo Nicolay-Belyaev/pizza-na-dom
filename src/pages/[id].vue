@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {useRoute} from 'vue-router';
-import {usePizzaStore} from "~/app/stores/pizzaStore";
 import {useToppingStore} from "~/app/stores/toppingStore";
 
 const route = useRoute();
