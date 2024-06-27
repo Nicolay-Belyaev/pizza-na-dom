@@ -5,13 +5,16 @@ import {useToppingStore} from "~/app/stores/toppingStore";
 
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
-const toppings = useToppingStore().toppings;
+const toppings = useToppingStore().getToppings();
+console.log(toppings);
 
-const selectedTopping = ref([])
-const selectedSize = ref('25')
+const selectedTopping = ref([]);
+const selectedSize = ref('25');
 
-const finalPrice = computed(() => pizza?.params[selectedSize.value].toppings.reduce((acc, topping) =>
-    selectedTopping.value.includes(topping.name) ? acc + topping.price : acc, pizza?.params[selectedSize.value].price))
+
+const finalPrice = computed(() => {
+  return pizza.prices[pizza.sizes.indexOf(selectedSize.value)];
+});
 </script>
 
 <template>

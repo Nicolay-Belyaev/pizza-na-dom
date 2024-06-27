@@ -5,33 +5,29 @@
 
 defineProps({
     checkboxes: {
-      type:Array<ICheckbox>,
+      type: Array<String>,
       default:[],
       required: true
     },
-    inCollomn: {
-      type: Boolean,
-      default: false
-    }
 })
 
 defineModel();
 </script>
 
 <template>
-  <div class="radio-container" :class="{inCollomn: inCollomn}">
+  <div class="radio-container" :class="{}">
     <UiBaseButton
         v-for="checkbox in checkboxes"
-        :key="checkbox.value"
-        :class="{ active: checkbox.value == modelValue}"
-        @click="$emit('update:modelValue', checkbox.value)">
-      {{ checkbox.title }}
+        :key="checkbox"
+        :class="{ active: checkbox == modelValue}"
+        @click="$emit('update:modelValue', checkbox)">
+      {{ checkbox }}
     </UiBaseButton>
   </div>
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
   .radio-container {
     display: flex;
     gap: 10px
@@ -41,6 +37,6 @@ defineModel();
     flex-direction: column;
   }
   .active {
-    background-color: green;
+    background-color: $dark-brand;
   }
 </style>
