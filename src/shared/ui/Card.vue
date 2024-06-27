@@ -42,7 +42,7 @@
       <span>{{ pizza.prices[0] }} ₽</span>
     </div>
     <NuxtLink
-        :to="{ name: 'id', params: {id: 'id-' + pizza.id} }">
+        :to="{ name: 'id', params: {id: pizza.id} }">
       <UiBaseButton
           form="sizepicker-form"
           color="sizepicker-color">

@@ -4,9 +4,9 @@ import {usePizzaStore} from "~/app/stores/pizzaStore";
 import {useToppingStore} from "~/app/stores/toppingsStore";
 
 const route = useRoute();
-const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
+const pizza = usePizzaStore().getPizzaById(route.params.id);
 const toppings = useToppingStore().getToppings();
-console.log(toppings);
+
 
 const selectedTopping = ref([]);
 const selectedSize = ref('25');
