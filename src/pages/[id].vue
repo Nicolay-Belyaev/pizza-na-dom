@@ -10,8 +10,8 @@ const toppings = useToppingStore().toppings;
 const selectedTopping = ref([])
 const selectedSize = ref('25')
 
-const finalPrice = computed(() => pizza?.params[selectedSize.value].toppings.reduce((acc, topping) =>
-    selectedTopping.value.includes(topping.name) ? acc + topping.price : acc, pizza?.params[selectedSize.value].price))
+// const finalPrice = computed(() => pizza?.params[selectedSize.value].toppings.reduce((acc, topping) =>
+//     selectedTopping.value.includes(topping.name) ? acc + topping.price : acc, pizza?.params[selectedSize.value].price))
 </script>
 
 <template>
@@ -20,9 +20,9 @@ const finalPrice = computed(() => pizza?.params[selectedSize.value].toppings.red
     <img :src="`${pizza.image}`">
     <div class="pizza__constructor">
       <h2>{{ pizza.name }}</h2>
-      <p>{{ finalPrice }}р</p>
+      <p></p>
       <div>
-        <p>выбирите размер пиццы</p>
+        <p>выберите размер пиццы</p>
         <UiWidgetsRadioButtons
             v-model="selectedSize"
             :checkboxes="pizza.sizes"/>
