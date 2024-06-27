@@ -5,6 +5,7 @@ import {useToppingStore} from "~/app/stores/toppingStore";
 
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
+console.log(pizza)
 const toppings = useToppingStore().toppings;
 
 const selectedTopping = ref([])
