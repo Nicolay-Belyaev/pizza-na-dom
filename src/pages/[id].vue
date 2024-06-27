@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {useRoute} from 'vue-router';
-import {useToppingStore} from "~/app/stores/toppingStore";
+import {useToppingStore} from "~/app/stores/toppingsStore";
 
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);

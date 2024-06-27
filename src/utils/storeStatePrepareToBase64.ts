@@ -23,9 +23,11 @@ export const base64StoreToFullStore = (base64: string) => {
                description: pizzaByID.description,
                image: pizzaByID.image,
                sizes: pizzaByID.sizes,
-
                prices: pizzaByID.prices,
                toppings: pizzaByID.toppings,
+               sauces: pizzaByID.sauces,
+
+               selectedSauce: cipheredPizza[33],
                selectedSize: cipheredPizza[1],
                selectedToppings: cipheredPizza[2],
                finalPrice: cipheredPizza[3],

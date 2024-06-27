@@ -1,4 +1,4 @@
-export const useToppingStore = defineStore('pizzaStore', () => {
+export const useToppingsStore = defineStore('toppingsStore', () => {
     const toppings = ref<IToppings>({
         '1': {name: "моцарелла", price: ['10', '20', '30']},
         '2': {name: "пепперони", price: ['10', '20', '30']},
