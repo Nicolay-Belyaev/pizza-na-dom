@@ -1,4 +1,5 @@
-export const useAppStore = defineStore('appStore', () => {
+export const useAppStore
+    = defineStore('appStore', () => {
     const themeColor = ref('light');
     const cartStateBase64 = ref('')
     function changeTheme() {

@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import {useRoute} from 'vue-router';
-import {useToppingStore} from "~/app/stores/toppingsStore";
+import {usePizzaStore} from "~/app/stores/pizzaStore";
+import {useToppingStore} from "~/app/stores/toppingStore";
 
 const route = useRoute();
 const pizza = usePizzaStore().getPizzaById(`${route.params.id}`);
-console.log(pizza)
-const toppings = useToppingStore().toppings;
+const toppings = useToppingStore().getToppings();
+console.log(toppings);
 
-const selectedTopping = ref([])
-const selectedSize = ref('25')
+const selectedTopping = ref([]);
+const selectedSize = ref('25');
 
-// const finalPrice = computed(() => pizza?.params[selectedSize.value].toppings.reduce((acc, topping) =>
-//     selectedTopping.value.includes(topping.name) ? acc + topping.price : acc, pizza?.params[selectedSize.value].price))
+
+const finalPrice = computed(() => {
+  return pizza.prices[pizza.sizes.indexOf(selectedSize.value)];
+});
 </script>
 
 <template>
@@ -20,9 +23,9 @@ const selectedSize = ref('25')
     <img :src="`${pizza.image}`">
     <div class="pizza__constructor">
       <h2>{{ pizza.name }}</h2>
-      <p></p>
+      <p>{{ finalPrice }}р</p>
       <div>
-        <p>выберите размер пиццы</p>
+        <p>выбирите размер пиццы</p>
         <UiWidgetsRadioButtons
             v-model="selectedSize"
             :checkboxes="pizza.sizes"/>
