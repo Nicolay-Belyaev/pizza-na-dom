@@ -19,9 +19,9 @@
       toppings: props.pizza.toppings,
       sauces: props.pizza.sauces,
 
-      selectedSauce: "1",
-      selectedSize: "25",
-      selectedToppings: ["1", "5"],
+      selectedSauce: "sauce 2",
+      selectedSize: "size 25",
+      selectedToppings: ["topping 1", "topping 5"],
       finalPrice: 750,
       amountInCart: 1,
       pizzaHash: 0

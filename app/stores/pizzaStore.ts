@@ -63,7 +63,7 @@ export const usePizzaStore = defineStore('pizzaStore', () => {
     ]);
 
     const getPizzaById = (id: String) => {
-        return pizzaCards.find(({id: string}) => id === id);
+        return pizzaCards.find((pizza: IPizza) => pizza.id === id);
     };
     return { pizzaCards, getPizzaById };
 });
