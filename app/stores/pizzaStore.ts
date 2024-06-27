@@ -1,4 +1,5 @@
-export const usePizzaStore = defineStore('pizzaStore', () => {
+export const usePizzaStore
+    = defineStore('pizzaStore', () => {
     const pizzaCards = ref<IPizza[]>([
         {
             id: "1",

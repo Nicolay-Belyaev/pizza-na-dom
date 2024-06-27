@@ -1,8 +1,5 @@
-interface ITopping {
+interface IToppings {
     name: string;
     price: string[];
-}
-interface IToppings {
-    [key: string]: ITopping;
 }
 

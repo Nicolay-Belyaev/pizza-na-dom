@@ -1,4 +1,5 @@
-export const useSaucesStore = defineStore('pizzaStore', () => {
+export const useSaucesStore
+    = defineStore('saucesStore', () => {
     const sauces = ref<ISaucesObject>({
         '1': {name: "моцарелла", price: '10'},
         '2': {name: "пепперони", price: '10'},
