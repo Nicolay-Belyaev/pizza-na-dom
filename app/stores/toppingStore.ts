@@ -12,5 +12,8 @@ export const useToppingStore
     const getToppings = () => {
         return toppings.value;
     }
+    const getToppingsByIndex = (arr: string | string[]) => {
+        return toppings.value.map(item => arr.includes(item.name));
+    }
     return {toppings, getToppings};
 });

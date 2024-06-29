@@ -17,10 +17,10 @@ defineModel();
 <template>
   <div class="radio-container" :class="{}">
     <UiBaseButton
-        v-for="checkbox in checkboxes"
+        v-for="(checkbox, index) in checkboxes"
         :key="checkbox"
-        :class="{ active: checkbox == modelValue}"
-        @click="$emit('update:modelValue', checkbox)">
+        :class="{ active: index == modelValue}"
+        @click="$emit('update:modelValue', `${index}`)">
       {{ checkbox }}
     </UiBaseButton>
   </div>
